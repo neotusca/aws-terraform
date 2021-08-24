@@ -1,0 +1,48 @@
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+module "vpc" {
+  source = "terraform-aws-modules/vpc/aws"
+
+  name = "TEST-vpc-hshdim-dev-an2"
+  cidr = "10.10.0.0/16"
+  enable_dns_hostnames = true
+
+  azs             = ["ap-northeast-2a", "ap-northeast-2c"]
+  public_subnets   = ["10.10.0.0/24", "10.10.1.0/24"]
+  private_subnets  = ["10.10.2.0/24", "10.10.3.0/24"]
+  database_subnets = ["10.10.4.0/24", "10.10.5.0/24"]
+
+
+  public_subnet_tags   = {
+    Name = "test-sn-hshdim-dev-an2a-pub",
+    Name = "test-sn-hshdim-dev-an2c-pub"
+  }
+  private_subnet_tags   = {
+    Name = "test-sn-hshdim-dev-an2a-pri",
+    Name = "test-sn-hshdim-dev-an2c-pri"
+  }
+  database_subnet_tags   = {
+    Name = "test-sn-hshdim-dev-an2a-pri-db",
+    Name = "test-sn-hshdim-dev-an2c-pri-db"
+  }
+
+
+
+
+
+
+
+  create_igw = true
+  igw_tags = {
+    Name = "TEST-igw-hshdim-dev-an2"
+  }
+
+  #enable_nat_gateway = true
+
+  tags = {
+    Terraform = "true"
+    Environment = "dev"
+  }
+}

@@ -1,0 +1,14 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+
+resource "aws_subnet" "stg-pub1" { }
+resource "aws_subnet" "stg-pub2" { }
+
+resource "aws_subnet" "stg-pri1" { }
+resource "aws_subnet" "stg-pri2" { }
+
+resource "aws_subnet" "stg-pri-db1" { }
+resource "aws_subnet" "stg-pri-db2" { }

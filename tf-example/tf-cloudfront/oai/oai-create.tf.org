@@ -1,0 +1,8 @@
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_cloudfront_origin_access_identity" "cf-s3" {
+  comment = "oai-s3-origin-202108"
+}
+

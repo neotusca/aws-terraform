@@ -1,0 +1,109 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_iam_group.dev_group[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_group" "dev_group" {
+      [32m+[0m [0m[1m[0marn[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m      = "dev_group"
+      [32m+[0m [0m[1m[0mpath[0m[0m      = "/users/"
+      [32m+[0m [0m[1m[0munique_id[0m[0m = (known after apply)
+    }
+
+[1m  # aws_iam_group_policy_attachment.dev_policy[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_group_policy_attachment" "dev_policy" {
+      [32m+[0m [0m[1m[0mgroup[0m[0m      = "dev_group"
+      [32m+[0m [0m[1m[0mid[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mpolicy_arn[0m[0m = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+    }
+
+[1m  # aws_iam_user.dev_user[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user" "dev_user" {
+      [32m+[0m [0m[1m[0marn[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mforce_destroy[0m[0m = false
+      [32m+[0m [0m[1m[0mid[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m          = "Steve"
+      [32m+[0m [0m[1m[0mpath[0m[0m          = "/dev/"
+      [32m+[0m [0m[1m[0mtags_all[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0munique_id[0m[0m     = (known after apply)
+    }
+
+[1m  # aws_iam_user.dev_user[1][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user" "dev_user" {
+      [32m+[0m [0m[1m[0marn[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mforce_destroy[0m[0m = false
+      [32m+[0m [0m[1m[0mid[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m          = "Tony"
+      [32m+[0m [0m[1m[0mpath[0m[0m          = "/dev/"
+      [32m+[0m [0m[1m[0mtags_all[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0munique_id[0m[0m     = (known after apply)
+    }
+
+[1m  # aws_iam_user.dev_user[2][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user" "dev_user" {
+      [32m+[0m [0m[1m[0marn[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mforce_destroy[0m[0m = false
+      [32m+[0m [0m[1m[0mid[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m          = "banner"
+      [32m+[0m [0m[1m[0mpath[0m[0m          = "/dev/"
+      [32m+[0m [0m[1m[0mtags_all[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0munique_id[0m[0m     = (known after apply)
+    }
+
+[1m  # aws_iam_user.dev_user[3][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user" "dev_user" {
+      [32m+[0m [0m[1m[0marn[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mforce_destroy[0m[0m = false
+      [32m+[0m [0m[1m[0mid[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m          = "Thor"
+      [32m+[0m [0m[1m[0mpath[0m[0m          = "/dev/"
+      [32m+[0m [0m[1m[0mtags_all[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0munique_id[0m[0m     = (known after apply)
+    }
+
+[1m  # aws_iam_user_group_membership.grp_mem[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user_group_membership" "grp_mem" {
+      [32m+[0m [0m[1m[0mgroups[0m[0m = [
+          [32m+[0m [0m"dev_group",
+        ]
+      [32m+[0m [0m[1m[0mid[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0muser[0m[0m   = "Steve"
+    }
+
+[1m  # aws_iam_user_group_membership.grp_mem[1][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user_group_membership" "grp_mem" {
+      [32m+[0m [0m[1m[0mgroups[0m[0m = [
+          [32m+[0m [0m"dev_group",
+        ]
+      [32m+[0m [0m[1m[0mid[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0muser[0m[0m   = "Tony"
+    }
+
+[1m  # aws_iam_user_group_membership.grp_mem[2][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user_group_membership" "grp_mem" {
+      [32m+[0m [0m[1m[0mgroups[0m[0m = [
+          [32m+[0m [0m"dev_group",
+        ]
+      [32m+[0m [0m[1m[0mid[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0muser[0m[0m   = "banner"
+    }
+
+[1m  # aws_iam_user_group_membership.grp_mem[3][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_iam_user_group_membership" "grp_mem" {
+      [32m+[0m [0m[1m[0mgroups[0m[0m = [
+          [32m+[0m [0m"dev_group",
+        ]
+      [32m+[0m [0m[1m[0mid[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0muser[0m[0m   = "Thor"
+    }
+
+[0m[1mPlan:[0m 10 to add, 0 to change, 0 to destroy.
+[0m[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

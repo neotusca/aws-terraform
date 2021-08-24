@@ -1,0 +1,55 @@
+{
+  "version": 4,
+  "terraform_version": "1.0.4",
+  "serial": 10,
+  "lineage": "098ca8cc-5ca7-9d03-f1d6-a3733813b86c",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "dev",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:vpc/vpc-015fd62ff2e231200",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "192.168.0.0/24",
+            "default_network_acl_id": "acl-093b1921b9ba0e482",
+            "default_route_table_id": "rtb-0567aa7ac954bbb17",
+            "default_security_group_id": "sg-0e15198ed79eff88c",
+            "dhcp_options_id": "dopt-0c2379b7fe7ee86bd",
+            "enable_classiclink": null,
+            "enable_classiclink_dns_support": null,
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "id": "vpc-015fd62ff2e231200",
+            "instance_tenancy": "default",
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "main_route_table_id": "rtb-0567aa7ac954bbb17",
+            "owner_id": "156736685434",
+            "tags": {
+              "AppTier": "vpc",
+              "Application": "vpc",
+              "Backup": "no",
+              "Environment": "dev",
+              "Name": "vpc-hshdim-dev-an2"
+            },
+            "tags_all": {
+              "AppTier": "vpc",
+              "Application": "vpc",
+              "Backup": "no",
+              "Environment": "dev",
+              "Name": "vpc-hshdim-dev-an2"
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ]
+}

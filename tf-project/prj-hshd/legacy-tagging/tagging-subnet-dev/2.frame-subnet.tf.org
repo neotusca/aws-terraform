@@ -1,0 +1,14 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+
+resource "aws_subnet" "dev-pub1" { }
+resource "aws_subnet" "dev-pub2" { }
+
+resource "aws_subnet" "dev-pri1" { }
+resource "aws_subnet" "dev-pri2" { }
+
+resource "aws_subnet" "dev-pri-db1" { }
+resource "aws_subnet" "dev-pri-db2" { }

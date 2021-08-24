@@ -1,0 +1,145 @@
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+
+### instance
+resource "aws_instance" "base-image" {
+    ami = "ami-075170cc268219d2f"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.micro"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-linux2-base-image"
+              "Environment": "dev"
+              "Application": "base-image"
+              "AppTier": "base-image"
+              "Backup": "no"
+    }
+}
+resource "aws_instance" "bastion" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-ext-bastion"
+              "Environment": "dev"
+              "Application": "bastion"
+              "AppTier": "svc"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "pc-web1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-pc-web-01"
+              "Environment": "dev"
+              "Application": "pc-web"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "pc-web2" {
+    ami = "ami-075170cc268219d2f"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2c-pc-web-02"
+              "Environment": "dev"
+              "Application": "pc-web"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+
+
+resource "aws_instance" "mobile-web1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-mobile-web-01"
+              "Environment": "dev"
+              "Application": "mobile-web"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "mobile-web2" {
+    ami = "ami-075170cc268219d2f"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2c-mobile-web-02"
+              "Environment": "dev"
+              "Application": "mobile-web"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "po1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-po-01"
+              "Environment": "dev"
+              "Application": "po"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "po2" {
+    ami = "ami-075170cc268219d2f"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2c-po-02"
+              "Environment": "dev"
+              "Application": "po"
+              "AppTier": "web"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "bo1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-bo-01"
+              "Environment": "dev"
+              "Application": "bo"
+              "AppTier": "svc"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "api1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-api-01"
+              "Environment": "dev"
+              "Application": "api"
+              "AppTier": "svc"
+              "Backup": "yes"
+    }
+}
+resource "aws_instance" "batch1" {
+    ami = "ami-00354840bfab0b3c2"
+    iam_instance_profile = "role-hshdim-dev-an2-ec2"
+    instance_type = "t3.medium"
+    tags = {
+              "Name": "ec2-hshdim-dev-an2a-batch-01"
+              "Environment": "dev"
+              "Application": "batch"
+              "AppTier": "svc"
+              "Backup": "yes"
+    }
+}
+
+
+
+
+

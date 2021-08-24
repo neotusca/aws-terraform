@@ -1,0 +1,15 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_route_table" "stg-pub" { }
+resource "aws_route_table" "stg-pri" { }
+resource "aws_route_table" "stg-pri-db" { }
+
+
+
+
+
+
+

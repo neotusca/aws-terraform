@@ -1,0 +1,23 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_instance" "base-image" { }
+resource "aws_instance" "bastion"   { }
+resource "aws_instance" "pc-web1"   { }
+resource "aws_instance" "pc-web2"   { }
+
+resource "aws_instance" "mobile-web1"   { }
+resource "aws_instance" "mobile-web2"   { }
+resource "aws_instance" "po1"   { }
+resource "aws_instance" "po2"   { }
+resource "aws_instance" "bo1"   { }
+resource "aws_instance" "api1"   { }
+resource "aws_instance" "batch1"   { }
+
+
+
+
+
+

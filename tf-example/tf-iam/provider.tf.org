@@ -1,0 +1,30 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_vpc" "main" {
+    cidr_block = "10.0.0.0/16"
+
+    tags = {
+        Name = "vpc_TFTEST"
+        Location = "Seoul"
+    }
+}
+
+resource "aws_subnet" "sn-TFTEST-1" {
+    vpc_id = "${aws_vpc.main.id}"
+    cidr_block = "10.0.0.0/24"
+    tags = {
+        Name = "sn_TFTEST-1"
+        Location = "Seoul"
+    }
+}
+resource "aws_subnet" "sn-TFTEST-2" {
+    vpc_id = "${aws_vpc.main.id}"
+    cidr_block = "10.0.1.0/24"
+    tags = {
+        Name = "sn_TFTEST-2"
+        Location = "Seoul"
+    }
+}

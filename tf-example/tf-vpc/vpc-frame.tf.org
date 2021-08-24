@@ -1,0 +1,30 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_vpc" "dev" { }
+resource "aws_vpc" "stg" { }
+
+resource "aws_subnet" "dev-pub1" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+resource "aws_subnet" "dev-pub2" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+resource "aws_subnet" "dev-pri1" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+resource "aws_subnet" "dev-pri2" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+resource "aws_subnet" "dev-pri-db1" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+resource "aws_subnet" "dev-pri-db2" {
+    vpc_id = "${aws_vpc.dev.id}"
+}
+
+#resource "aws_route_table" "dev-pri" {
+    #vpc_id = "${aws_vpc.dev.id}"
+#}

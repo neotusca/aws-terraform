@@ -1,0 +1,17 @@
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_vpc" "dev" { }
+
+resource "aws_subnet" "dev-pub1" { }
+resource "aws_subnet" "dev-pub2" { }
+resource "aws_subnet" "dev-pri1" { }
+resource "aws_subnet" "dev-pri2" { }
+resource "aws_subnet" "dev-pri-db1" { }
+resource "aws_subnet" "dev-pri-db2" { }
+
+resource "aws_route_table" "dev-pub" { }
+resource "aws_route_table" "dev-pri" { }
+resource "aws_route_table" "dev-pri-db" { }

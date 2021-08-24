@@ -1,0 +1,31 @@
+{
+  "version": 4,
+  "terraform_version": "1.0.4",
+  "serial": 1,
+  "lineage": "f9895bba-dedb-bac8-7dc9-914997bece3e",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_cloudfront_origin_access_identity",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "caller_reference": "Tue, 24 Aug 2021 01:24:42 GMT",
+            "cloudfront_access_identity_path": "origin-access-identity/cloudfront/E3OGTUF8O165B",
+            "comment": "oai-s3-origin",
+            "etag": "E204R2IWI45J1L",
+            "iam_arn": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3OGTUF8O165B",
+            "id": "E3OGTUF8O165B",
+            "s3_canonical_user_id": "1198e85aa9f36535fb41e84fe9914cc0f78f0570bd1bf584b8e2acd35ff76d6b2cbbea92ce66d22d8c088cebbf34c5a2"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+terraform {
+  backend "remote" {
+    organization = "mzcloud"
+
+    workspaces {
+      name = "aws-s3-cloudfront"
+    }
+  }
+}
+
+provider "aws" {
+    region = "ap-northeast-2"
+}
+
+resource "aws_cloudfront_origin_access_identity" "example" {
+  comment = "oai-s3-origin-2"
+}
+

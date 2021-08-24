@@ -1,0 +1,240 @@
+{
+  "version": 4,
+  "terraform_version": "1.0.4",
+  "serial": 10,
+  "lineage": "098ca8cc-5ca7-9d03-f1d6-a3733813b86c",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pri-db1",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "cidr_block": "192.168.0.192/27",
+            "id": "subnet-02bdcaae6b864ac42",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2a-pri-db"
+              "AppTier": "subnet",
+              "Application": "subnet",
+              "Backup": "no",
+              "Environment": "dev",
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2a-pri-db"
+              "AppTier": "subnet",
+              "Application": "subnet",
+              "Backup": "no",
+              "Environment": "dev",
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pri-db2",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:subnet/subnet-0c27fef04f315e719",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-northeast-2c",
+            "availability_zone_id": "apne2-az3",
+            "cidr_block": "192.168.0.224/27",
+            "customer_owned_ipv4_pool": "",
+            "id": "subnet-0c27fef04f315e719",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "156736685434",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2c-pri-db"
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2c-pri-db"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pri1",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:subnet/subnet-0ec6c6c307e6e1f55",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-northeast-2a",
+            "availability_zone_id": "apne2-az1",
+            "cidr_block": "192.168.0.64/26",
+            "customer_owned_ipv4_pool": "",
+            "id": "subnet-0ec6c6c307e6e1f55",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "156736685434",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2a-pri"
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2a-pri"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pri2",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:subnet/subnet-015220e6b5b9387d8",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-northeast-2c",
+            "availability_zone_id": "apne2-az3",
+            "cidr_block": "192.168.0.128/26",
+            "customer_owned_ipv4_pool": "",
+            "id": "subnet-015220e6b5b9387d8",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "156736685434",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2c-pri"
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2c-pri"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pub1",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:subnet/subnet-0f015e5d31dde3aa8",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-northeast-2a",
+            "availability_zone_id": "apne2-az1",
+            "cidr_block": "192.168.0.0/27",
+            "customer_owned_ipv4_pool": "",
+            "id": "subnet-0f015e5d31dde3aa8",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "156736685434",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2a-pub"
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2a-pub"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "dev-pub2",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-northeast-2:156736685434:subnet/subnet-008f5b347fd7dd190",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-northeast-2c",
+            "availability_zone_id": "apne2-az3",
+            "cidr_block": "192.168.0.32/27",
+            "customer_owned_ipv4_pool": "",
+            "id": "subnet-008f5b347fd7dd190",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "156736685434",
+            "tags": {
+              "Name": "sn-hshdim-dev-an2c-pub"
+            },
+            "tags_all": {
+              "Name": "sn-hshdim-dev-an2c-pub"
+            },
+            "timeouts": {
+              "create": null,
+              "delete": null
+            },
+            "vpc_id": "vpc-015fd62ff2e231200"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    }
+  ]
+}
